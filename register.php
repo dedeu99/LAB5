@@ -10,12 +10,11 @@ $email="email1";
  template = new HTML_Template_IT('.'); 
 
 
- // Carrega o template Filmes2_TemplateIT.tpl
- $template->loadTemplatefile('index_template.html',true, true); 
+ $template->loadTemplatefile('register_template.html',true, true); 
 
 
 
-$template->setCurrentBlock("POSTS");
+$template->setCurrentBlock("REGISTERFORM");
 $template->setVariable('NAME', $name );
 $template->setVariable('EMAIL', $email);
 
