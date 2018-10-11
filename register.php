@@ -7,6 +7,7 @@ echo "<script type='text/javascript'>alert('2');</script>";
 $name="nome1";
 $email="email1";
 $message="asdasdasdasdasd";
+{MESSAGE_HIDDEN}
 echo "<script type='text/javascript'>alert(3');</script>";
 // Cria um novo objecto template
 $template = new HTML_Template_IT('.'); 
@@ -21,6 +22,7 @@ echo "<script type='text/javascript'>alert('6');</script>";
 $template->setVariable('NAME', $name );
 $template->setVariable('EMAIL', $email);
 $template->setVariable('MESSAGE', $message);
+$template->setVariable('MESSAGE_HIDDEN',"hidden");
 
 echo "<script type='text/javascript'>alert('7');</script>";
 
