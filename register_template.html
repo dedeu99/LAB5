@@ -55,23 +55,28 @@
 
       </div>
       <div class="row justify-content-center align-items-center">
-        
+        <!-- BEGIN REGISTERFORM -->
         <div class="col-sm-4">
           <form action="register.php" >
             <div class="form-group text-center">
               <h1>Register</h1>
             </div>
             <div class="form-group">
-              <label for="emailfield"><sub>Email</sub></label>
-              <input type="email" id="emailfield" class="form-control" name="email">
+              <label for="namefield"><sub>Nome:</sub></label>
+              <input type="text" id="namefield" class="form-control" name="name" value={NAME}>
             </div>
 
             <div class="form-group">
-              <label for="passwordfield"><sub>Password</sub></label>
+              <label for="emailfield"><sub>Email:</sub></label>
+              <input type="email" id="emailfield" class="form-control" name="email" value={EMAIL}>
+            </div>
+
+            <div class="form-group">
+              <label for="passwordfield"><sub>Password:</sub></label>
               <input type="password" id="passwordfield" name="password" class="form-control" >
             </div>
             <div class="form-group">
-              <label for="passwordconfirmationfield"><sub>Password Confirmation</sub></label>
+              <label for="passwordconfirmationfield"><sub>Password Confirmation:</sub></label>
               <input type="password" id="passwordconfirmationfield" name="passwordConfirmation" class="form-control" >
             </div>
             <div class="form-group text-center">
@@ -79,6 +84,7 @@
             </div>
           </form>
         </div>
+        <!-- END REGISTERFORM -->
       </div>
 
       
