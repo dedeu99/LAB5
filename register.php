@@ -11,14 +11,14 @@ echo "<script type='text/javascript'>alert(3');</script>";
 $template = new HTML_Template_IT('.'); 
 
 echo "<script type='text/javascript'>alert('4');</script>";
-//$template->loadTemplatefile('register_template.html',true, true); 
+$template->loadTemplatefile('register_template.html',true, true); 
 
 
 echo "<script type='text/javascript'>alert('5');</script>";
-//$template->setCurrentBlock("REGISTERFORM");
+$template->setCurrentBlock("REGISTERFORM");
 echo "<script type='text/javascript'>alert('6');</script>";
-//$template->setVariable('NAME', $name );
-//$template->setVariable('EMAIL', $email);
+$template->setVariable('NAME', $name );
+$template->setVariable('EMAIL', $email);
 
 echo "<script type='text/javascript'>alert('7');</script>";
 
