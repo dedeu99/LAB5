@@ -6,6 +6,7 @@ echo "<script type='text/javascript'>alert('2');</script>";
 
 $name="nome1";
 $email="email1";
+$message="asdasdasdasdasd";
 echo "<script type='text/javascript'>alert(3');</script>";
 // Cria um novo objecto template
 $template = new HTML_Template_IT('.'); 
