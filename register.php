@@ -22,7 +22,7 @@ $template->setVariable('EMAIL', $email);
 
 echo "<script type='text/javascript'>alert('7');</script>";
 
-//$template->parseCurrentBlock();
+$template->parseCurrentBlock();
 
 echo "<script type='text/javascript'>alert('8');</script>";
 
