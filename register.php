@@ -20,6 +20,7 @@ $template->setCurrentBlock("REGISTERFORM");
 echo "<script type='text/javascript'>alert('6');</script>";
 $template->setVariable('NAME', $name );
 $template->setVariable('EMAIL', $email);
+$template->setVariable('MESSAGE', $message);
 
 echo "<script type='text/javascript'>alert('7');</script>";
 
