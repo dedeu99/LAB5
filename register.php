@@ -26,7 +26,7 @@ $template->parseCurrentBlock();
 
 echo "<script type='text/javascript'>alert('8');</script>";
 
-//$template->show();
+$template->show();
 
 
 //$response = http_get("./", "asd"), $info);
