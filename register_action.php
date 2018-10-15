@@ -17,7 +17,7 @@ $nrows = mysql_num_rows($result);
 echo "<script type='text/javascript'>alert('".$nrows."');</script>";
 
 
-header("Location:register.php?error=1&name=".$name."&email=".$email);
+//header("Location:register.php?error=1&name=".$name."&email=".$email);
 
 
 ?>
