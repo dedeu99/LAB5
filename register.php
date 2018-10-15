@@ -7,8 +7,8 @@ echo "<script type='text/javascript'>alert('2');</script>";
 $name=$_GET['name'];
 $email=$_GET['email'];
 $message=$_GET['ERROR'];
-{MESSAGE_HIDDEN}
-echo "<script type='text/javascript'>alert(3');</script>";
+//{MESSAGE_HIDDEN}
+echo "<script type='text/javascript'>alert('3');</script>";
 // Cria um novo objecto template
 $template = new HTML_Template_IT('.'); 
 
