@@ -4,9 +4,9 @@ header('Content-Type: text/html; charset=utf-8');
 require_once "HTML/Template/IT.php";
 echo "<script type='text/javascript'>alert('2');</script>";
 
-$name="nome1";
-$email="email1";
-$message="asdasdasdasdasd";
+$name=$_GET['name'];
+$email=$_GET['email'];
+$message=$_GET['ERROR'];
 {MESSAGE_HIDDEN}
 echo "<script type='text/javascript'>alert(3');</script>";
 // Cria um novo objecto template
