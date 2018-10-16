@@ -7,15 +7,13 @@ $password=$_POST['password'];
 $password2=$_POST['passwordConfirmation'];
 
 
-//echo "<script type='text/javascript'>alert('\'".$password."\'');</script>";
-//echo "<script type='text/javascript'>alert('1');</script>";
-echo "<script type='text/javascript'>alert('password:".$password.":');</script>";
+/*echo "<script type='text/javascript'>alert('password:".$password.":');</script>";
 echo "<script type='text/javascript'>alert('password2:".$password2.":');</script>";
 echo "<script type='text/javascript'>alert('email:".$email.":');</script>";
 echo "<script type='text/javascript'>alert('empty(password):".empty($password).":');</script>";
 echo "<script type='text/javascript'>alert('empty(password2):".empty($password2).":');</script>";
 echo "<script type='text/javascript'>alert('strcmp(password,password2):".strcmp($password,$password2).":');</script>";
-
+*/
 if(empty($name)) {
 	header("Location:register.php?error=1&email=".$email."");//ERROR1 BAD NAME
 }
