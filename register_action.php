@@ -18,13 +18,18 @@ $result = @ mysql_query($query,$db );
 //var_dump($result);
 $nrows = mysql_num_rows($result); 
 //echo "<script type='text/javascript'>alert('\'".$password."\'');</script>";
-echo "<script type='text/javascript'>alert('".$password.");</script>";
-echo "<script type='text/javascript'>alert('".$password2.");</script>";
-echo "<script type='text/javascript'>alert('".$email.");</script>";
+
+echo "<script type='text/javascript'>alert('".$password."-);</script>";
+echo "<script type='text/javascript'>alert('".$password2."-);</script>";
+echo "<script type='text/javascript'>alert('".$email."-);</script>";
+echo "<script type='text/javascript'>alert('".empty(password).");</script>";
+echo "<script type='text/javascript'>alert('".empty(password2).");</script>";
+echo "<script type='text/javascript'>alert('".strcmp(password,password2).");</script>";
+
 if(empty(password) || empty(password2) || strcmp(password,password2)!=0)
-	header("Location:register.php?error=2&name=".$name."&email=".$email."");
+	echo "ERROR 2";//header("Location:register.php?error=2&name=".$name."&email=".$email."");
 if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) 
-	header("Location:register.php?error=1&name=".$name."&email=".$email."");
+	echo "ERROR 1";//header("Location:register.php?error=1&name=".$name."&email=".$email."");
 
 
 	//header("Location: register_success.html"); //TO REMOVE

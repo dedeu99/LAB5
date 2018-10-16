@@ -1,5 +1,5 @@
 <?php
-echo "<script type='text/javascript'>alert('1');</script>";
+
 header('Content-Type: text/html; charset=utf-8');
 require_once "HTML/Template/IT.php";
 
