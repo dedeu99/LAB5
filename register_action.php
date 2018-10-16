@@ -17,7 +17,7 @@ $query = "SELECT email FROM users WHERE email='".$email."'";
 $result = @ mysql_query($query,$db ); 
 //var_dump($result);
 $nrows = mysql_num_rows($result); 
-echo "<script type='text/javascript'>alert('\'".$password."\'');</script>";
+//echo "<script type='text/javascript'>alert('\'".$password."\'');</script>";
 
 if(password!=password2)
 	header("Location:register.php?error=2&name=".$name."&email=".$email."");
