@@ -18,13 +18,13 @@ $result = @ mysql_query($query,$db );
 //var_dump($result);
 $nrows = mysql_num_rows($result); 
 //echo "<script type='text/javascript'>alert('\'".$password."\'');</script>";
-
-echo "<script type='text/javascript'>alert('".$password."'');</script>";
-echo "<script type='text/javascript'>alert('".$password2."'');</script>";
-echo "<script type='text/javascript'>alert('".$email."'');</script>";
-echo "<script type='text/javascript'>alert('".empty(password)."'');</script>";
-echo "<script type='text/javascript'>alert('".empty(password2)."'');</script>";
-echo "<script type='text/javascript'>alert('".strcmp(password,password2)."'');</script>";
+echo "<script type='text/javascript'>alert('1');</script>";
+echo "<script type='text/javascript'>alert('".$password."');</script>";
+echo "<script type='text/javascript'>alert('".$password2."');</script>";
+echo "<script type='text/javascript'>alert('".$email."');</script>";
+echo "<script type='text/javascript'>alert('".empty(password)."');</script>";
+echo "<script type='text/javascript'>alert('".empty(password2)."');</script>";
+echo "<script type='text/javascript'>alert('".strcmp(password,password2)."');</script>";
 
 if(empty(password) || empty(password2) || strcmp(password,password2)!=0)
 	echo "ERROR 2";//header("Location:register.php?error=2&name=".$name."&email=".$email."");
