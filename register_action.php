@@ -19,14 +19,14 @@ $result = @ mysql_query($query,$db );
 $nrows = mysql_num_rows($result); 
 //echo "<script type='text/javascript'>alert('\'".$password."\'');</script>";
 //echo "<script type='text/javascript'>alert('1');</script>";
-echo "<script type='text/javascript'>alert('password:".$password."');</script>";
-echo "<script type='text/javascript'>alert('password2:".$password2."');</script>";
-echo "<script type='text/javascript'>alert('email:".$email."');</script>";
-echo "<script type='text/javascript'>alert('empty(password):".empty(password)."');</script>";
-echo "<script type='text/javascript'>alert('empty(password2):".empty(password2)."');</script>";
-echo "<script type='text/javascript'>alert('strcmp(password,password2):".strcmp(password,password2)."');</script>";
+echo "<script type='text/javascript'>alert('password:".$password.":');</script>";
+echo "<script type='text/javascript'>alert('password2:".$password2.":');</script>";
+echo "<script type='text/javascript'>alert('email:".$email.":');</script>";
+echo "<script type='text/javascript'>alert('empty(password):".empty($password).":');</script>";
+echo "<script type='text/javascript'>alert('empty(password2):".empty($password2).":');</script>";
+echo "<script type='text/javascript'>alert('strcmp(password,password2):".strcmp($password,$password2).":');</script>";
 
-if(empty(password) || empty(password2) || strcmp(password,password2)!=0)
+if(empty($password) || empty($password2) || strcmp($password,$password2)!=0)
 	echo "ERROR 2";//header("Location:register.php?error=2&name=".$name."&email=".$email."");
 if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) 
 	echo "ERROR 1";//header("Location:register.php?error=1&name=".$name."&email=".$email."");
