@@ -7,5 +7,5 @@ $domain = parse_url($referer);
 
 echo $referer;
 echo "\n-----\n";
-echo basename($domain);
+print_r($domain);
 ?>
