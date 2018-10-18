@@ -18,17 +18,13 @@ echo "<script type='text/javascript'>alert('strcmp(password,password2):".strcmp(
 
 if(strlen($name)<=0) {
 	header("Location: register.php?error=1&email=$email");//ERROR1 BAD NAME
-}
-
-
-header("Location: register.php?name=".strlen($name));
-
+}else
 if(strlen($email)<=0 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	header("Location: register.php?error=2&name=$name&email=$email");//ERROR2 BAD EMAIL
-}
+}else
 if(strlen($password)<=0 || strlen($password2)<=0 || strcmp($password,$password2)!=0)
 	header("Location: register.php?error=3&name=$name&email=$email");//ERROR3 BAD PASSWORDCONFIRMATION
-
+else{
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////CHECK FOR PASSWORD LENGTH
 
 
@@ -64,5 +60,5 @@ if($nrows==0)
 
 //header("Location:register.php?error=1&name=".$name."&email=".$email);
 
-
+}
 ?>
