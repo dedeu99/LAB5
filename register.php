@@ -42,6 +42,9 @@ switch($error){
 		$message="Email is already in use. Please check the email used and, if it really is yours, recover your password";
 	break;
 
+	default:
+	$template->setVariable('MESSAGE_HIDDEN',"hidden");
+
 }
 $template->setVariable('MESSAGE', $message);
 $template->parseCurrentBlock();
