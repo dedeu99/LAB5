@@ -11,24 +11,15 @@ $error=$_GET['error'];
 
 // Cria um novo objecto template
 $template = new HTML_Template_IT('.'); 
-
-
 $template->loadTemplatefile('register_template.html',true, true); 
 
-
-
-
 $template->setCurrentBlock("REGISTERFORM");
-
-
-
-
 
 $template->setVariable('NAME', $name );
 $template->setVariable('EMAIL', $email);
 
-//$template->setVariable('MESSAGE_HIDDEN',"hidden");
-
+$template->setVariable('MESSAGE_HIDDEN',"");
+$message="";
 switch($error){
 	case "1":
 		$message="Please fill in your name";
@@ -51,15 +42,5 @@ switch($error){
 $template->setVariable('MESSAGE', $message);
 $template->parseCurrentBlock();
 
-
-
 $template->show();
-
-
-//$response = http_get("./", "asd"), $info);
-
-
-//header("Location:register.php?error=1&name=Joao%20Silva");
-//header("Location: register_success.html"); 
-
 ?>
