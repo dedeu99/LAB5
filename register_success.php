@@ -3,7 +3,7 @@
 header('Refresh: 5; url=index.php');
 
 $referrer = $_SERVER['HTTP_REFERER']; 
-$base=base_url();
+$base=$_SERVER['DOCUMENT_ROOT'];
 
 echo $referrer;
 echo $base;
