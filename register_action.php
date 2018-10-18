@@ -39,22 +39,19 @@ $query = "SELECT email FROM users WHERE email='$email'";
 
 //echo "<script type='text/javascript'>alert('SELECT count(*) FROM users WHERE email=\'".$email."\'');</script>";
 // executar a query
-$result = @; 
+$result = @mysql_query($query,$dbx); 
 //var_dump($result);
 $nrows = mysql_num_rows($result); 
 	
 if($nrows==0)
 {
 	$query = "INSERT INTO users (name,email,created_at,updated_at,password_digest,remember_digest,admin) VALUES ('$name','$email',NOW(),NOW(),'$password','$password2',0)";	
-	$result=mysql_query($query,$dbx);
+	$result=@mysql_query($query,$dbx);
 
 	if($result)
 		header("Location: register_success.html"); 
 	else
-	{
 		header("Location:register.php?error=4&name=$name&email=$email");//ERROR4 COULDN'T UPDATE THE DATABASE TRY AGAIN
-	}
-	
 }
 
 /*else
