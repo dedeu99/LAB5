@@ -47,14 +47,14 @@ if($nrows==0)
 {
 	$query = "INSERT INTO users (name,email,created_at,updated_at,password_digest,remember_digest,admin) VALUES ('$name','$email',NOW(),NOW(),'$password','$password2',0);"	
 	var_dump($query);
-	$result = @ mysql_query($query,$db ); 
+	/*$result = @ mysql_query($query,$db ); 
 	$nrows = mysql_num_rows($result); 
 	if($nrows==1)
 		header("Location: register_success.html"); 
 	else
 	{
 		header("Location:register.php?error=4&name=$name&email=$email");//ERROR4 COULDN'T UPDATE THE DATABASE TRY AGAIN
-	}
+	}*/
 	
 }
 
