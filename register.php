@@ -6,7 +6,7 @@ require_once "HTML/Template/IT.php";
 
 $name=$_GET['name'];
 $email=$_GET['email'];
-$message=$_GET['error'];
+$error=$_GET['error'];
 //{MESSAGE_HIDDEN}
 
 // Cria um novo objecto template
@@ -29,7 +29,7 @@ $template->setVariable('EMAIL', $email);
 
 //$template->setVariable('MESSAGE_HIDDEN',"hidden");
 
-switch($message){
+switch($error){
 	case "1":
 		$message="Please fill in your name";
 	break;
