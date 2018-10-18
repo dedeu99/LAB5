@@ -8,4 +8,6 @@ $domain = parse_url($referer);
 echo $referer;
 echo "\n-----\n";
 print_r($domain);
+
+echo basename($domain[path]).PHP_EOL;
 ?>
