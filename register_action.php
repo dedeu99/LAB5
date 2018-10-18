@@ -39,17 +39,14 @@ $query = "SELECT email FROM users WHERE email='$email'";
 
 //echo "<script type='text/javascript'>alert('SELECT count(*) FROM users WHERE email=\'".$email."\'');</script>";
 // executar a query
-$result = @mysql_query($query,$db ); 
+$result = @; 
 //var_dump($result);
 $nrows = mysql_num_rows($result); 
 	
 if($nrows==0)
 {
 	$query = "INSERT INTO users (name,email,created_at,updated_at,password_digest,remember_digest,admin) VALUES ('$name','$email',NOW(),NOW(),'$password','$password2',0)";	
-	var_dump($query);
-	$result = @ mysql_query($query,$db ); 
-	$nrows = mysql_num_rows($result); 
-	if($nrows==1)
+	if(mysql_query($query,$db ))
 		header("Location: register_success.html"); 
 	else
 	{
