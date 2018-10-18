@@ -23,10 +23,10 @@ $template->setVariable('HIDDEN',"");
 $message="";
 
 switch($error){
-	/*case 1:
+	case 1:
 		$message="Please fill in your name";
 	break;
-
+	/*
 	case 2:
 		$message="Please insert a valid email";
 	break;
