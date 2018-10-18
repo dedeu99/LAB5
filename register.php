@@ -40,7 +40,7 @@ switch($error){
 
 	case 5:
 		$message="Email is already in use. Please check the email used and, if it really is yours, recover your password";
-	break;*/
+	break;
 
 }
 $template->setVariable('MESSAGE', $message);
