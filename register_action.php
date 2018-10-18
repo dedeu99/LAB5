@@ -14,7 +14,7 @@ echo "<script type='text/javascript'>alert('empty(password):".empty($password)."
 echo "<script type='text/javascript'>alert('empty(password2):".empty($password2).":');</script>";
 echo "<script type='text/javascript'>alert('strcmp(password,password2):".strcmp($password,$password2).":');</script>";
 */
-
+echo "<script type='text/javascript'>alert('email:".strlen($name).":');</script>";
 echo strlen($name);
 
 if(strlen($name)>0) {
