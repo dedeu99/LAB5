@@ -20,7 +20,7 @@ $template->setVariable('EMAIL', $email);
 
 $template->setVariable('MESSAGE_HIDDEN',"");
 $template->setVariable('HIDDEN',"");
-$message=$error;
+$message="";
 
 switch($error){
 	case 1:
@@ -38,12 +38,13 @@ switch($error){
 	case 4:
 		$message="Database error, couldn't create a new user. Please try again later";
 	break;
+
 	case 5:
 		$message="Email is already in use. Please check the email used and, if it really is yours, recover your password";
 	break;
 
-	default:
-	template->setVariable('MESSAGE_HIDDEN',"hidden");
+	//default:
+	t//emplate->setVariable('MESSAGE_HIDDEN',"hidden");
 }
 $template->setVariable('MESSAGE', $message);
 $template->parseCurrentBlock();
