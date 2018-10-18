@@ -19,14 +19,13 @@ $template->setVariable('NAME', $name );
 $template->setVariable('EMAIL', $email);
 
 $template->setVariable('MESSAGE_HIDDEN',"");
-$template->setVariable('HIDDEN',"");
 $message="";
 
 switch($error){
 	case 1:
 		$message="Please fill in your name";
 	break;
-	/*
+	
 	case 2:
 		$message="Please insert a valid email";
 	break;
@@ -43,8 +42,6 @@ switch($error){
 		$message="Email is already in use. Please check the email used and, if it really is yours, recover your password";
 	break;*/
 
-	//default:
-	//emplate->setVariable('MESSAGE_HIDDEN',"hidden");
 }
 $template->setVariable('MESSAGE', $message);
 $template->parseCurrentBlock();
