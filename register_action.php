@@ -14,12 +14,15 @@ echo "<script type='text/javascript'>alert('empty(password):".empty($password)."
 echo "<script type='text/javascript'>alert('empty(password2):".empty($password2).":');</script>";
 echo "<script type='text/javascript'>alert('strcmp(password,password2):".strcmp($password,$password2).":');</script>";
 */
-echo "<script type='text/javascript'>alert('email:".strlen($name).":');</script>";
-echo strlen($name);
+
 
 if(strlen($name)<=0) {
 	header("Location: register.php?error=1&email=$email");//ERROR1 BAD NAME
 }
+
+
+header("Location: register.php?name=".strlen($name));
+
 if(strlen($email)<=0 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	header("Location: register.php?error=2&name=$name&email=$email");//ERROR2 BAD EMAIL
 }
