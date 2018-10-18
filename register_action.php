@@ -49,7 +49,7 @@ if($nrows==0)
 	$result=@mysql_query($query,$db);
 
 	if($result)
-		header("Location: register_success.html"); 
+		header("Location: register_success.php"); 
 	else
 		header("Location:register.php?error=4&name=$name&email=$email");//ERROR4 COULDN'T UPDATE THE DATABASE TRY AGAIN
 }else
