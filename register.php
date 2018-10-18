@@ -22,7 +22,6 @@ $template->setVariable('MESSAGE_HIDDEN',"");
 $template->setVariable('HIDDEN',"");
 $message=$error;
 
-var_dump($error);/*
 switch($error){
 	case 1:
 		$message="Please fill in your name";
@@ -45,7 +44,7 @@ switch($error){
 
 	default:
 	template->setVariable('MESSAGE_HIDDEN',"hidden");
-}*/
+}
 $template->setVariable('MESSAGE', $message);
 $template->parseCurrentBlock();
 
