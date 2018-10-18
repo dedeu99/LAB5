@@ -46,7 +46,9 @@ $nrows = mysql_num_rows($result);
 if($nrows==0)
 {
 	$query = "INSERT INTO users (name,email,created_at,updated_at,password_digest,remember_digest,admin) VALUES ('$name','$email',NOW(),NOW(),'$password','$password2',0)";	
-	if(mysql_query($query,$db ))
+	$result=mysql_query($query,$dbx);
+
+	if($result)
 		header("Location: register_success.html"); 
 	else
 	{
