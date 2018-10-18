@@ -17,13 +17,13 @@ echo "<script type='text/javascript'>alert('strcmp(password,password2):".strcmp(
 echo "<script type='text/javascript'>alert('email:".strlen($name).":');</script>";
 echo strlen($name);
 
-if(strlen($name)>0) {
+if(strlen($name)<=0) {
 	header("Location: register.php?error=1&email=$email");//ERROR1 BAD NAME
 }
-if(strlen($email)>0 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if(strlen($email)<=0 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	header("Location: register.php?error=2&name=$name&email=$email");//ERROR2 BAD EMAIL
 }
-if(strlen($password)>0 || strlen($password2)>0 || strcmp($password,$password2)!=0)
+if(strlen($password)<=0 || strlen($password2)<=0 || strcmp($password,$password2)!=0)
 	header("Location: register.php?error=3&name=$name&email=$email");//ERROR3 BAD PASSWORDCONFIRMATION
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////CHECK FOR PASSWORD LENGTH
@@ -56,7 +56,7 @@ if($nrows==0)
 	else
 		header("Location:register.php?error=4&name=$name&email=$email");//ERROR4 COULDN'T UPDATE THE DATABASE TRY AGAIN
 }else
-	header("Location:register.php?error=5&name=$name&email=".strlen($name));//ERROR5 EMAIL ALREADY IN USE
+	header("Location:register.php?error=5&name=$name&email=$email");//ERROR5 EMAIL ALREADY IN USE
 
 
 //header("Location:register.php?error=1&name=".$name."&email=".$email);
