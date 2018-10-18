@@ -1,13 +1,19 @@
 <?php
 
-//header('Refresh: 5; url=index.php');
+header('Refresh: 5; url=index.php');
 
 $referer = $_SERVER['HTTP_REFERER']; 
 $domain = parse_url($referer);
-
-echo $referer;
-echo "\n-----\n";
+/*
+echo $referer.PHP_EOL;
+echo "-----".PHP_EOL;
 print_r($domain);
 
-echo basename($domain[path]).PHP_EOL;
+echo PHP_EOL.basename($domain[path]).PHP_EOL*/
+
+if(strcmp(basename($domain[path]),"register.php")==0)
+	echo "SUCESSFULLY CREATED";
+else
+	echo "how did you get here again?";
+
 ?>
