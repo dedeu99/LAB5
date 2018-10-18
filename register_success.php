@@ -2,9 +2,11 @@
 
 header('Refresh: 5; url=index.php');
 
-
 $referrer = $_SERVER['HTTP_REFERER']; 
+$base=base_url();
+
 echo $referrer;
+echo $base;
 //echo base_url();
 //echo "http://all.deei.fct.ualg.pt/~a62362/LAB5/";
 //if(strcmp($referrer,))
