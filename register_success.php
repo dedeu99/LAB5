@@ -6,6 +6,7 @@ $referrer = $_SERVER['HTTP_REFERER'];
 $base=$_SERVER['DOCUMENT_ROOT'];
 
 echo $referrer;
+echo "\n-----\n";
 echo $base;
 //echo base_url();
 //echo "http://all.deei.fct.ualg.pt/~a62362/LAB5/";
