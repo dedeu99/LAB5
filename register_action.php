@@ -31,7 +31,7 @@ if(empty($password) || empty($password2) || strcmp($password,$password2)!=0)
 // ligação à base de dados
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 // criar query numa string
-$query = "SELECT email FROM users WHERE email='".$email."'";
+$query = "SELECT email FROM users WHERE email='$email'";
 
 //echo "<script type='text/javascript'>alert('SELECT count(*) FROM users WHERE email=\'".$email."\'');</script>";
 // executar a query
@@ -49,7 +49,7 @@ if(nrows==0)
 		header("Location: register_success.html"); 
 	else
 	{
-		header("Location:register.php?error=4&name=".$name."&email=".$email);//ERROR4 COULDN'T UPDATE THE DATABASE TRY AGAIN
+		header("Location:register.php?error=4&name=$name&email=$email");//ERROR4 COULDN'T UPDATE THE DATABASE TRY AGAIN
 	}
 }
 
