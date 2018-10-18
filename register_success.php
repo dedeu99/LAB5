@@ -1,7 +1,7 @@
 <?php
 
 
-header("Refresh: 5; url=".base_url());
+//header("Refresh: 5; url=".base_url());
 
 
 //$referrer = $_SERVER['HTTP_REFERER']; 
