@@ -14,13 +14,13 @@ echo "<script type='text/javascript'>alert('empty(password):".empty($password)."
 echo "<script type='text/javascript'>alert('empty(password2):".empty($password2).":');</script>";
 echo "<script type='text/javascript'>alert('strcmp(password,password2):".strcmp($password,$password2).":');</script>";
 */
-if(empty($name)) {
+if(strlen($name)>0) {
 	header("Location: register.php?error=1&email=$email");//ERROR1 BAD NAME
 }
-if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if(strlen($email)>0 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	header("Location: register.php?error=2&name=$name&email=$email");//ERROR2 BAD EMAIL
 }
-if(empty($password) || empty($password2) || strcmp($password,$password2)!=0)
+if(strlen($password)>0 || strlen($password2)>0 || strcmp($password,$password2)!=0)
 	header("Location: register.php?error=3&name=$name&email=$email");//ERROR3 BAD PASSWORDCONFIRMATION
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////CHECK FOR PASSWORD LENGTH
