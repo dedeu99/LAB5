@@ -19,7 +19,8 @@ $template->setVariable('NAME', $name );
 $template->setVariable('EMAIL', $email);
 
 $template->setVariable('MESSAGE_HIDDEN',"");
-$message="";
+$template->setVariable('HIDDEN',"");
+$message=$error;
 
 var_dump($error);/*
 switch($error){
