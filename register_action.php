@@ -55,7 +55,7 @@ if(nrows==0)
 {
 	header("Location:register.php?error=5&name=".$name."&email=".$email);//ERROR5 EMAIL ALREADY IN USE
 }
-*/
+
 //header("Location:register.php?error=1&name=".$name."&email=".$email);
 
 
