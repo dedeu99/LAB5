@@ -7,7 +7,7 @@ $base=$_SERVER['DOCUMENT_ROOT'];
 
 echo $referrer;
 echo "\n-----\n";
-echo $base;
+echo __FILE__;
 //echo base_url();
 //echo "http://all.deei.fct.ualg.pt/~a62362/LAB5/";
 //if(strcmp($referrer,))
