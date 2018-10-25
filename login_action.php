@@ -15,7 +15,7 @@ $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 // criar query numa string
 $query = "SELECT id,name,password FROM users WHERE email='$email'";
 
-
+/*
 //echo "<script type='text/javascript'>alert('SELECT count(*) FROM users WHERE email=\'".$email."\'');</script>";
 // executar a query
 $result = @mysql_query($query,$db); 
@@ -77,6 +77,6 @@ if(nrows>0){
 	$template->setVariable('MESSAGE', $message);
 	$template->parseCurrentBlock();
 
-	$template->show();
+	$template->show();*/
 
 ?>
