@@ -41,15 +41,19 @@ if(strlen($password)<=0){
 	header("Location: register.php?error=8&name=$name&email=$email");//ERROR8
 	die();
 }
-if(strlen($password2)<=0){
-	header("Location: register.php?error=9&name=$name&email=$email");//ERROR9
-	die();
-}
+
+
 
 if(strlen($password)<=$min_password_length){
 	header("Location: register.php?error=10&name=$name&email=$email&chars=$min_password_length");//ERROR10
 	die();
 }
+
+if(strlen($password2)<=0){
+	header("Location: register.php?error=9&name=$name&email=$email");//ERROR9
+	die();
+}
+
 
 if(strcmp($password,$password2)!=0){
 	header("Location: register.php?error=3&name=$name&email=$email");//ERROR3 BAD PASSWORDCONFIRMATION

@@ -59,7 +59,8 @@ switch($error){
 	break;
 
 	case 10:
-		$message="Your password must be at least 7 characters long";
+		$i=$_GET['chars'];
+		$message="Your password must be at least $i characters long";
 	break;
 
 	default:
