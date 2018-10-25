@@ -63,7 +63,7 @@ if(strlen($password)<=0){
 
 
 
-if(strlen($password)<=$min_password_length){
+if(strlen($password)<$min_password_length){
 	header("Location: register.php?error=10&name=$name&email=$email&chars=$min_password_length");//ERROR10
 	die();
 }

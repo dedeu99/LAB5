@@ -7,9 +7,7 @@ require_once "HTML/Template/IT.php";
 $name=$_GET['name'];
 $email=$_GET['email'];
 $error=$_GET['error'];
-//{MESSAGE_HIDDEN}
 
-// Cria um novo objecto template
 $template = new HTML_Template_IT('.'); 
 $template->loadTemplatefile('register_template.html',true, true); 
 
