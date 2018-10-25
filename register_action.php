@@ -86,7 +86,7 @@ $query = "INSERT INTO users (name,email,created_at,updated_at,password_digest,re
 $result=@mysql_query($query,$db);
 
 if($result)
-	header("Location: register_success.php"); 
+	header("Location: register_success.php?name=$name"); 
 else
 	header("Location:register.php?error=4&name=$name&email=$email");//ERROR4 COULDN'T UPDATE THE DATABASE TRY AGAIN
 
