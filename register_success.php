@@ -10,7 +10,7 @@ $domain = parse_url($referer);
 
 
 $template = new HTML_Template_IT('.'); 
-$template->loadTemplatefile('register_template.html',true, true); 
+$template->loadTemplatefile('register_sucess.html',true, true); 
 
 $template->setCurrentBlock("SUCESSFORM");
 
