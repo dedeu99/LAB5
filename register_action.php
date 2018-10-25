@@ -6,7 +6,7 @@ $email=$_POST['email'];
 $password=$_POST['password'];
 $password2=$_POST['passwordConfirmation'];
 
-$min_password_length 7
+$min_password_length=7;
 /*echo "<script type='text/javascript'>alert('password:".$password.":');</script>";
 echo "<script type='text/javascript'>alert('password2:".$password2.":');</script>";
 echo "<script type='text/javascript'>alert('email:".$email.":');</script>";
