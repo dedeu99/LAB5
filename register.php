@@ -63,6 +63,10 @@ switch($error){
 		$message="Your password must be at least $i characters long";
 	break;
 
+	case 11:
+		$message="Name is already in use.Please choose a diferent one";
+	break;
+
 	default:
 	$template->setVariable('MESSAGE_HIDDEN',"hidden");
 
