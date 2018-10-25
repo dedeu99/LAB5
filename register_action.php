@@ -6,7 +6,7 @@ $email=$_POST['email'];
 $password=$_POST['password'];
 $password2=$_POST['passwordConfirmation'];
 
-
+$min_password_length 7
 /*echo "<script type='text/javascript'>alert('password:".$password.":');</script>";
 echo "<script type='text/javascript'>alert('password2:".$password2.":');</script>";
 echo "<script type='text/javascript'>alert('email:".$email.":');</script>";
@@ -19,13 +19,42 @@ echo "<script type='text/javascript'>alert('strcmp(password,password2):".strcmp(
 if(strlen($name)<=0) {
 	header("Location: register.php?error=1&email=$email");//ERROR1 BAD NAME
 	die();
-}else
-if(strlen($email)<=0 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+}
+if(!ctype_alnum($name)) {
+	header("Location: register.php?error=6&email=$email");//ERROR6
+	die();
+}
+
+
+if(strlen($email)<=0 ) {
+	header("Location: register.php?error=7&name=$name");//ERROR7
+	die();
+}
+
+if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	header("Location: register.php?error=2&name=$name&email=$email");//ERROR2 BAD EMAIL
-}else
-if(strlen($password)<=0 || strlen($password2)<=0 || strcmp($password,$password2)!=0)
+	die();
+}
+
+
+if(strlen($password)<=0){
+	header("Location: register.php?error=8&name=$name&email=$email");//ERROR8
+	die();
+}
+if(strlen($password2)<=0){
+	header("Location: register.php?error=9&name=$name&email=$email");//ERROR9
+	die();
+}
+
+if(strlen($password)<=$min_password_length){
+	header("Location: register.php?error=10&name=$name&email=$email&chars=$min_password_length");//ERROR10
+	die();
+}
+
+if(strcmp($password,$password2)!=0){
 	header("Location: register.php?error=3&name=$name&email=$email");//ERROR3 BAD PASSWORDCONFIRMATION
-else{
+	die();
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////CHECK FOR PASSWORD LENGTH
 
 
@@ -61,5 +90,5 @@ if($nrows==0)
 
 //header("Location:register.php?error=1&name=".$name."&email=".$email);
 
-}
+
 ?>

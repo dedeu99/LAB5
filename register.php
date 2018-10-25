@@ -42,6 +42,26 @@ switch($error){
 		$message="Email is already in use. Please check the email used and, if it really is yours, recover your password";
 	break;
 
+	case 6:
+		$message="name must only contain letters and numbers";
+	break;
+
+	case 7:
+		$message="Please fill in your email";
+	break;
+
+	case 8:
+		$message="Please fill in your password";
+	break;
+
+	case 9:
+		$message="Please fill in your password confirmation";
+	break;
+
+	case 10:
+		$message="Your password must be at least $_GET['chars'] characters long";
+	break;
+
 	default:
 	$template->setVariable('MESSAGE_HIDDEN',"hidden");
 
